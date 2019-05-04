@@ -10,11 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var chartView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let circleChart = CircleChart(frame: self.chartView.bounds, items: [0.3,0.2,0.1,0.3,0.1])
+        
+        self.chartView.addSubview(circleChart)
+        
     }
-
-
+    
 }
 
